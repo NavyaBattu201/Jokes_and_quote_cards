@@ -1,0 +1,47 @@
+body {
+	font-family: Arial, sans-serif;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background-color: #000000;
+}
+.cardContainer {
+	display: grid;
+	column-gap: 50px;
+	row-gap: 50px;
+	padding: 15px;
+	gap: 15px;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.card {
+	width: 300px;
+	height: 300px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin: 10px;
+	display: flex;
+	padding: 15px;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.front,
+.back {
+	width: 90%;
+	height: 100%;
+	position: absolute;
+	align-items: center;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
